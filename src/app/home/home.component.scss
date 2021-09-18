@@ -1,0 +1,34 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.profile-picture-pane {
+  width: 100%;
+  min-height: 240px;
+  background-image: url("/assets/images/me.webp");
+  background-size: cover;
+  background-position: center center;
+}
+
+.description-pane {
+  width: 100%;
+  display: flex;
+
+  .description {
+    padding: 32px;
+    width: 100%;
+    p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .page {
+    flex-direction: column;
+  }
+  .profile-picture-pane {
+    background-position: center 30%;
+  }
+}
