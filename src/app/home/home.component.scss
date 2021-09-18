@@ -1,6 +1,8 @@
 .page {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 1280px;
+  max-width: 800px;
 }
 
 .profile-picture-pane {
@@ -18,6 +20,7 @@
   .description {
     padding: 32px;
     width: 100%;
+    max-width: 375px;
     p {
       color: rgba(255, 255, 255, 0.7);
     }
@@ -26,28 +29,34 @@
 
 .links {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
 
   a {
-    padding: 16px 8px;
+    padding: 16px;
     display: inline-block;
     color: #ff4545;
     text-decoration: none;
     text-transform: capitalize;
-
-    &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
-    }
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .page {
-    flex-direction: column;
-  }
+@media only screen and(max-width: 1024px) {
   .profile-picture-pane {
-    background-position: center 30%;
+    max-width: 240px;
+  }
+}
+
+@media only screen and(max-width: 768px) {
+  .profile-picture-pane {
+    max-width: 160px;
+    background-position-x: 70%;
+  }
+}
+
+@media only screen and(max-width: 420px) {
+  .profile-picture-pane {
+    max-width: 72px;
+    background-position-x: 65%;
   }
 }
