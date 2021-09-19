@@ -1,7 +1,6 @@
 .page {
   display: flex;
   height: 100vh;
-  max-height: 1280px;
   max-width: 800px;
 }
 
@@ -15,6 +14,8 @@
 
 .description-pane {
   width: 100%;
+  height: 100%;
+  overflow-y: scroll;
   display: flex;
 
   .description {
@@ -31,6 +32,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 -16px;
+  padding-bottom: 16px;
 
   a {
     padding: 16px;
@@ -44,12 +46,14 @@
 @media only screen and(max-width: 1024px) {
   .profile-picture-pane {
     max-width: 240px;
+    max-height: 800px;
   }
 }
 
 @media only screen and(max-width: 768px) {
   .profile-picture-pane {
     max-width: 160px;
+    max-height: 600px;
     background-position-x: 70%;
   }
 }
@@ -57,6 +61,7 @@
 @media only screen and(max-width: 420px) {
   .profile-picture-pane {
     max-width: 72px;
+    max-height: 300px;
     background-position-x: 65%;
   }
 }
