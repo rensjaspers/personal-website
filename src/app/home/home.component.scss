@@ -1,11 +1,22 @@
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #222;
+  color: white;
+}
+
 .page {
   display: flex;
-  height: 100vh;
-  max-width: 800px;
+  height: 100%;
 }
 
 .profile-picture-pane {
   width: 100%;
+  max-width: 375px;
   min-height: 240px;
   background-image: url("/assets/images/me.webp");
   background-size: cover;
@@ -55,6 +66,7 @@
   .profile-picture-pane {
     max-width: 240px;
     max-height: 800px;
+    background-position-x: 80%;
   }
 }
 
